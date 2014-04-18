@@ -1,0 +1,21 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+    <title>Web Chat - Registration</title>
+    <link rel="stylesheet" type="text/css" href="auth.css"/>
+</wicket:head>
+<body>
+	<div id="header">register o_0?</div>
+ 	<div id="feedB" align="center"><div wicket:id="feedback">[[ feedback ]]</div></div>
+	<form wicket:id="form">
+		<fieldset id="items">
+			<div class="fieldset"><label wicket:id="name-label">[name label]</label><input wicket:id="name" type="text" placeholder="Name"></div><br>
+			<div class="fieldset"><label wicket:id="email-label">[email label]</label><input wicket:id="email" type="text" placeholder="E-mail"></div><br>
+			<div class="fieldset"><label wicket:id="password-label">[password label]</label><input wicket:id="password" type="password" placeholder="Password" title="Password should contain lower & uper case letter & number and more than 6 letters"></div><br>
+			<div class="fieldset"><input type="submit" value="Register" wicket:id="ajax-button"/></div>
+		</fieldset>
+	</form>
+</body>
+<footer>
+<div id ="author">authored by <p title="email: jevgen.pucko@gmail">Eugene Pucko</p></div>
+</footer>
+</html>

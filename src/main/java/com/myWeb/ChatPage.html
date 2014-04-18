@@ -1,0 +1,33 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+    <link rel="stylesheet" type="text/css" href="chat.css"/>
+    <title>chat.</title>
+</wicket:head>
+<body>
+<div id="container">
+<div id="header">chat. <br>
+    <nav wicket:id="mainNavigation">
+      navigation links
+    </nav>
+    
+</div>
+
+	<form wicket:id="chatForm">
+<div id="contents">	
+<div id="main"> 
+	<input type="text" wicket:id="message"/>
+</div>	
+<div id="cart">	
+		<table>
+			<tr wicket:id="userki">
+				<td>
+					<div id ="user"><span wicket:id="fullname"></span></div>
+				</td>
+			</tr>
+		</table>
+</div>	
+</div>	
+	</form>
+</div>
+</body>
+</html>
