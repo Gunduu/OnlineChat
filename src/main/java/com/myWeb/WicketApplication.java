@@ -1,5 +1,6 @@
 package com.myWeb;
 
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.LinkedList;
@@ -7,6 +8,9 @@ import java.util.List;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
+import org.apache.wicket.protocol.https.HttpsConfig;
+import org.apache.wicket.protocol.https.HttpsMapper;
+import org.apache.wicket.protocol.ws.api.BaseWebSocketBehavior;
 import org.apache.wicket.Application;
 import org.apache.wicket.Component;
 import org.apache.wicket.RestartResponseAtInterceptPageException;
@@ -24,6 +28,10 @@ import org.apache.wicket.request.component.IRequestableComponent;
 import org.apache.wicket.request.resource.PackageResourceReference;
 import org.apache.wicket.settings.IRequestLoggerSettings;
 
+import test.ChartWebSocketResource;
+
+import test.WebSocketBehaviorDemoPage;
+import test.WebSocketResourceDemoPage;
 import database.Connector;
 import de.agilecoders.wicket.core.Bootstrap;
 import de.agilecoders.wicket.core.settings.BootstrapSettings;
@@ -34,7 +42,7 @@ import users.UserList;
  * @see com.myWeb.Start#main(String[])
  */
 public class WicketApplication extends WebApplication
-{    	
+{   
 	public List<UserList> users = new LinkedList<UserList>();
 	Logger logger = Logger.getLogger(Connector.class.getName());
 	/**
@@ -59,6 +67,7 @@ public class WicketApplication extends WebApplication
 	protected  void init()
 	{
 		super.init();
+
 		IRequestLoggerSettings reqLogger = Application.get().getRequestLoggerSettings();
 		reqLogger.setRequestLoggerEnabled(true);
 		PackageResourceReference prrFavicon = new PackageResourceReference(
@@ -100,17 +109,21 @@ public class WicketApplication extends WebApplication
             }
         });
 	}
+
 	public void configureBootstrap(){
 		BootstrapSettings settings = new BootstrapSettings();
 		Bootstrap.install(this, settings);
 	}
+
 	public List<UserList> getUsers(){
 		return this.users;
 	}
+
 	public void addUser(UserList user){
 		logger.log(Level.INFO,user.getName());
 		this.users.add(user);
 	}
+
 	public void deleteUser(UserList user){
 
 		logger.log(Level.INFO,user.getName());
@@ -130,5 +143,14 @@ public class WicketApplication extends WebApplication
 			logger.log(Level.INFO, "now");
 			logger.log(Level.INFO, ul.getName());
 		}		
-	}	
+	}
+	public int getUsersCount()
+	{
+		int Users = 0;
+		for(UserList ul : users)
+		{
+			Users++;
+		}
+		return Users;
+	}
 }

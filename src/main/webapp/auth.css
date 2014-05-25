@@ -46,9 +46,30 @@ label{
 	text-align:center;
 	width:100%;
 }
+#UserCount{
+	position: absolute;
+	font-family: 'Trebuchet MS', 'Tahoma', 'Helvetica', 'Arial', 'Sans-serif', 'sans';
+	text-align:center;
+	width:100%;
+	padding-right: 300px;
+}
+#UserOnline{
+	position: absolute;
+	font-family: 'Trebuchet MS', 'Tahoma', 'Helvetica', 'Arial', 'Sans-serif', 'sans';
+	text-align:center;
+	width:100%;	
+	padding-left: 300px;
+}
 #tooltip{
 	color: red;
 }
+#numberPos1{
+	font-size: 20px;
+}
+
+#numberPos2{
+	font-size: 20px;
+} 
 #header { 
  bottom: 15em; 
  right: 40em; 	

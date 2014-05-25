@@ -37,9 +37,9 @@ public class Message {
         this.date = date;
     }
     
-    public Date getUser()
+    public String getUser()
     {
-        return date;
+        return user;
     }
 
     public void setUser(String user)
@@ -50,6 +50,6 @@ public class Message {
     @Override
     public String toString()
     {
-        return "[Comment date = " + date + ", text = " + text + "]";
+        return "[User = " + user + ", text = " + text + "]";
     }    
 }

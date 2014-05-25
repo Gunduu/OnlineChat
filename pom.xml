@@ -109,6 +109,47 @@
 			<artifactId>wicket-jquery-ui</artifactId>
 			<version>6.14.0</version>
 		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-jms_1.1_spec</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-all</artifactId>
+			<version>5.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.wicket-jquery-ui</groupId>
+			<artifactId>wicket-kendo-ui</artifactId>
+			<version>6.14.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-atmosphere</artifactId>
+			<version>0.17</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>atmosphere-runtime</artifactId>
+					<groupId>org.atmosphere</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-native-websocket-tomcat</artifactId>
+			<version>6.14.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<resources>
@@ -183,6 +224,15 @@
 				<version>2.9</version>
 				<configuration>
 					<downloadSources>true</downloadSources>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>tomcat-maven-plugin</artifactId>
+				<configuration>
+					<url>http://127.0.0.1:8080/manager</url>
+					<server>TomcatServer</server>
+					<path>/myWebChat</path>
 				</configuration>
 			</plugin>
 		</plugins>

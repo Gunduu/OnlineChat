@@ -18,7 +18,7 @@ public class NavigationPanel extends Panel {
         Link homePageLink = new Link("home") {
             @Override
             public void onClick() {
-            	setResponsePage(new ChatPage());
+            	this.setResponsePage(new ChatPage());
             }
         };
         this.add(homePageLink);
@@ -39,7 +39,6 @@ public class NavigationPanel extends Panel {
 			@Override
             public void onClick() {
 				SignOut signOut = new SignOut();
-				signOut.Invalidate();
                 this.setResponsePage(new SignIn());
             }
         };

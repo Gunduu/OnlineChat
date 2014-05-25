@@ -6,24 +6,26 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;  */
+  height:700px;
 }
 body {
  margin : 0; padding : 0;
  font-size : 15px;
 }
-
-div { 
+footer{
+ margin: 0; padding: 0;
+ text-align:center;
+}
+/* div { 
  margin : 0; padding : 0; 
-} 
-
+}  */
+#container{
+	margin: 0 auto;
+}
 #contents {
- min-height: 450px;
- min-width: 75px;
+ heigth: 700px;
+ width: 800px;
  padding-left : 10px; padding-right : 10px;
-/*  -moz-border-radius: 4px;
- -webkit-border-radius: 4px;
- border: 5px solid #666666;
- border-radius: 4px; */
  background-color: #F0F0F0;
  display: table;
  margin: 0 auto;
@@ -31,7 +33,7 @@ div {
 }
 
 #main { 
- width : 600px; 
+ min-width : 100px; 
  float : left; 
  color: red;
 } 
@@ -48,23 +50,41 @@ div {
 #header h1 { 
  display : none; 
 } 
-
 #header { 
- width : 100%; 
- height : 150px;
- font-size: 40px;
- text-align: center;
+width : 100%; 
+height : 150px;
+font-size: 40px;
+text-align: center;
 }
-
 #wrapper-panel-frame {
-	padding: 4px;
-	min-height: 100px;
-	background-color: #eee;
-	border: 1px solid #aaa;
+padding: 4px;
+min-height: 100px;
+background-color: #eee;
+border: 1px solid #aaa;
 }
-
+#area{
+resize:none;
+}
+#field{
+resize:none;
+}
 nav li {
-  display: inline;
-  margin-right: 1em;
-  font-size: 80%;
+display: inline;
+margin-right: 1em;
+font-size: 80%;
+}
+#button{
+	float: right;
+}
+#numberPos1{
+	font-size: 20px;
+	padding-left : 50px;
+}
+#userlabel{ display: none;}
+#author{
+position: absolute;
+bottom:1px;
+font-family: 'Trebuchet MS', 'Tahoma', 'Helvetica', 'Arial', 'Sans-serif', 'sans';
+text-align:center;
+width:100%;
 }

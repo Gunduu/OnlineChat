@@ -16,9 +16,9 @@
 		The value might be either "development" (reloading when templates change) or 
 		"deployment". If no configuration is found, "development" is the default. -->
 
-	<filter>
+ 	<filter>
 		<filter-name>wicket.myWebChat</filter-name>
-		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+		<filter-class>org.apache.wicket.protocol.ws.tomcat7.Tomcat7WebSocketFilter</filter-class>
 		<init-param>
 			<param-name>applicationClassName</param-name>
 			<param-value>com.myWeb.WicketApplication</param-value>
@@ -28,5 +28,6 @@
 	<filter-mapping>
 		<filter-name>wicket.myWebChat</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping> 
+
 </web-app>

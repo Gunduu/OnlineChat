@@ -1,6 +1,8 @@
 <html xmlns:wicket="http://wicket.apache.org">
 <wicket:head>
     <link rel="stylesheet" type="text/css" href="chat.css"/>
+    <link rel="stylesheet" type="text/css" href="css/kendo/kendo.common.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/kendo/kendo.default.min.css" media="all" />
     <title>chat.</title>
 </wicket:head>
 <body>
@@ -9,25 +11,32 @@
     <nav wicket:id="mainNavigation">
       navigation links
     </nav>
-    
+<br><br>
 </div>
-
+<div id="contents">
 	<form wicket:id="chatForm">
-<div id="contents">	
-<div id="main"> 
-	<input type="text" wicket:id="message"/>
-</div>	
-<div id="cart">	
-		<table>
+	<div id="main">
+		<br><textarea readonly id="area" rows="15" cols="100"></textarea><br><br>
+		<textarea id="field" rows="3" cols="75"></textarea>
+		<div id="button"><input wicket:id="button" type="button" value="send" style="height:60px; width:100px"><br></br></div>
+	</div>	
+	<div id="cart">
+	<br>
+		 <div id="numberPos1">online: <span wicket:id="onlinecount"></span></div><br><br>
+		 <table wicket:id="theContainer">
 			<tr wicket:id="userki">
 				<td>
 					<div id ="user"><span wicket:id="fullname"></span></div>
 				</td>
 			</tr>
 		</table>
-</div>	
-</div>	
+		<a href="#" wicket:id="signout">SIGNout</a>
+	</div>
 	</form>
 </div>
+</div>
 </body>
+<footer>
+	<div id ="author">authored by <p title="email: jevgen.pucko@gmail">Eugene Pucko</p></div>
+</footer>
 </html>

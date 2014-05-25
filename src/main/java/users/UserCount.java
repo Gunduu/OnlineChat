@@ -9,7 +9,7 @@ import org.apache.wicket.markup.html.WebPage;
 
 import database.Connector;
 
-public class UserCount extends WebPage {
+public class UserCount{
 	private int usercount;
 	Logger logger = Logger.getLogger(Connector.class.getName());
 	public UserCount()

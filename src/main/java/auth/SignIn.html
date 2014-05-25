@@ -6,12 +6,20 @@
 <body>
 <div id="feedB"><div wicket:id="feedback"></div></div>
 	<div id="header">SignIn ;)</div>
+	<div id ="UserCount">
+		<div id ="numberPos1"><span wicket:id="totalcount"></span></div><br>
+		registred users
+	</div>
+		<div id ="UserOnline">
+		<div id ="numberPos2"><span wicket:id="onlinecount"></span></div><br>
+		online users
+	</div>
     <form wicket:id = "signInForm">
 		<fieldset id="items">
 			<div class="fieldset"><label>Username</label><input wicket:id="username" type="text" placeholder="Username"></div><br>
 			<div class="fieldset"><label>Password</label><input wicket:id="password" type="password" placeholder="Password"></div><br>
-			<div class="fieldset"><input type="submit" value="SignIn"></div>
-			<wicket:link><a href="/myWebChat/wicket/bookmarkable/register.Register?0">Register</a></wicket:link>
+			<div class="fieldset"><input type="submit" value="SignIn" wicket:id="ajax-button"></div>
+			<wicket:link><a href="/myWebChat/wicket/bookmarkable/register.Register?0">Register</a></wicket:link><br>
 		</fieldset>
     </form>
 </body>
